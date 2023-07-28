@@ -8,14 +8,14 @@ import (
 	"github.com/stiorg/mightydragon/types"
 )
 
-type CatFactService struct {
-	url string
-}
-
 func NewCatFactService(url string) types.Service {
 	return &CatFactService{
 		url: url,
 	}
+}
+
+type CatFactService struct {
+	url string
 }
 
 func (s *CatFactService) GetCatFact(ctx context.Context) (*types.CatFact, error) {
